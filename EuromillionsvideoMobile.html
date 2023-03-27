@@ -1,0 +1,125 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* Default styles */
+    body {
+        background-color: #fff;
+        font-size: 16px;
+    }
+
+    /* Styles for screens wider than 480px */
+    @media screen and (min-width: 480px) {
+        body {
+            background-color: #333;
+            font-size: 18px;
+        }
+    }
+</style>
+
+<video autoplay loop muted poster="https://i.imgur.com/f9Yos9H.mp4" id="bg-video">
+  <source src="https://i.imgur.com/f9Yos9H.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<style>
+  #bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+  }
+</style>
+<head>
+    <title>Euromillions Lottery</title>
+<head>
+<style>
+
+}
+</style>
+    <style>
+        /* Style the button */
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Style the container */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(242, 242, 242, 0.5);
+            text-align: center;
+        }
+
+        /* Style the numbers */
+        .numbers {
+            font-size: 24px;
+            font-weight: bold;
+        }
+.numbers {
+    list-style: none;
+}
+		
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Euromillions Lottery</h1>
+        <p>Your numbers:</p>
+        <ul class="numbers">
+            <li id="number1"></li>
+            <li id="number2"></li>
+            <li id="number3"></li>
+            <li id="number4"></li>
+            <li id="number5"></li>
+        </ul>
+        <p>Your lucky stars:</p>
+        <ul class="numbers">
+            <li id="star1"></li>
+            <li id="star2"></li>
+        </ul>
+        <button onclick="generateNumbers()">Generate numbers</button>
+    </div>
+    <script>
+        // Generate random numbers for the main numbers
+        function generateNumbers() {
+            var numbers = [];
+            while (numbers.length < 5) {
+                var number = Math.floor(Math.random() * 50) + 1;
+                if (numbers.indexOf(number) === -1) {
+                    numbers.push(number);
+                }
+            }
+
+            // Generate random numbers for the lucky stars
+            var stars = [];
+            while (stars.length < 2) {
+                var star = Math.floor(Math.random() * 12) + 1;
+                if (stars.indexOf(star) === -1) {
+                    stars.push(star);
+                }
+            }
+
+            // Display the numbers on the page
+            document.getElementById("number1").innerHTML = numbers[0];
+            document.getElementById("number2").innerHTML = numbers[1];
+            document.getElementById("number3").innerHTML = numbers[2];
+            document.getElementById("number4").innerHTML = numbers[3];
+            document.getElementById("number5").innerHTML = numbers[4];
+            document.getElementById("star1").innerHTML = stars[0];
+            document.getElementById("star2").innerHTML = stars[1];
+        }
+
+        // Generate the numbers when the page loads
+        generateNumbers();
+    </script>
+</body>
+</html>
